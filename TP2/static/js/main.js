@@ -56,6 +56,9 @@
         loop: true,
         margin: 0,
         items: 1,
+        mouseDrag: false,
+        touchDrag: false,
+        pullDrag: false,
         dots: false,
         nav: true,
         navText: ["<span class='arrow_left'><span/>", "<span class='arrow_right'><span/>"],
@@ -63,7 +66,7 @@
         animateIn: 'fadeIn',
         smartSpeed: 1200,
         autoHeight: false,
-        autoplay: true
+        autoplay: false
     });
 
     /*--------------------------

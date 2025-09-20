@@ -621,8 +621,17 @@ ol {
   Gallery
 -----------------------*/
 
+.gallery_pic {
+
+	display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .gallery__pic img {
-	min-width: 100%;
+	max-width: 100%;
+	height: auto;
 }
 
 /*---------------------
@@ -665,8 +674,12 @@ ol {
 -----------------------*/
 
 .appointment {
-	position: relative;
-	z-index: 9;
+    position: relative;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
 }
 
 .appointment .section-title h2 {
