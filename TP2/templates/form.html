@@ -37,29 +37,46 @@
                         </div>
                     </div>
                 </div>
-                <form action="#" class="appointment__form">
+                <form action="/registracion" method="POST" class="appointment__form">
+                <input type="hidden" name="modalidad" id="mods">
                     <div class="row">
                         <div class="col-lg-6">
-                            <input type="text" placeholder="Name">
+                            <input type="text" name="name" placeholder="Nombre (Obligatorio)">
                         </div>
                         <div class="col-lg-6">
-                            <input type="text" placeholder="Email">
+                            <input type="text" name="email" placeholder="Email (Obligatorio)">
                         </div>
-                        <div class="col-lg-6">
-                            <input type="text" placeholder="Celular">
+                        <div class="col-lg-6 offset-lg-3">
+                            <input type="text" name="num" placeholder="Celular (Obligatorio)">
                         </div>
-                        <div class="col-lg-6">
-                            <select class="class-select">
-                                <option value="">opcion 1</option>
-                                <option value="">opcion 2</option>
-                            </select>
-                        </div>
+
                         <div class="col-lg-12 text-center">
-                            <textarea placeholder="mensaje"></textarea>
+
+                            <div class="row mt-4 text-center pb-4 offset-lg-2">
+                                {% for datos in diccionario.modalidad.values() %}
+                                <div class="col-lg-5">
+                                    <button type="button" class="btn btn-lg w-100 py-4 btn-modalidad"
+                                    onclick=
+                                    "selectModalidad(this, '{{ datos.nombre }}<br>Distancia: {{ datos.distancia }}<br>Dificultad: {{ datos.dificultad }}')"
+                                    >
+                                    - {{ datos.nombre }}<br><br>
+                                    - distancia: {{datos.distancia}} <br><br>
+                                    - dificultad: {{datos.dificultad}} </strong> <br>
+                                    </button>
+                                </div>
+                                {% endfor %}
+                            </div>
+
+                            <textarea name="info" placeholder="informacion adicional"></textarea>
                             <button type="submit">Enviar</button>
                         </div>
                     </div>
                 </form>
+                {% if mensaje %}
+                
+                <h3 class="col-lg-10 offset-lg-1 classes__msj py-3"> {{ mensaje }} </h3>
+
+                {% endif %}
             </div>
         </div>
     </section>

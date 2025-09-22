@@ -167,3 +167,12 @@
     });
 
 })(jQuery);
+
+function selectModalidad(btn, valor) {
+
+    document.querySelectorAll('.btn-modalidad').forEach(but => but.classList.remove('active'));
+
+    btn.classList.add('active');
+
+    document.getElementById('mods').value = valor;
+}

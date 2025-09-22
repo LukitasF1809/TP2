@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-{% extends "base.html" %} 
-{% block title %}Home{% endblock %}
 
-{% block content %}
-    
 
 <!------------------------ ESTO VA EN EL BASE TAMBIEN [fin] ------------------->
 
@@ -17,8 +13,8 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="hero__text">
-                                <span>Welcome to Zogin</span>
-                                <h2>What hurts today makes you stronger tomorrow</h2>
+                                <span> {{diccionario["organizador"]}} </span>
+                                <h2> ¡Carrera anual de ciclismo de la UPED! </h2>
                                 <a href="{{ url_for('registracion') }}" class="primary-btn">REGISTRARSE</a>
                             </div>
                         </div>
@@ -45,17 +41,17 @@
                     <div class="home__about__text">
                         <div class="section-title">
                             <img src="{{url_for('static' , filename='img/icon.png') }}" alt="icon">
-                            <h2>Welcome to Zogin</h2>
+                            <h2>Unete a la carrera anual mas grande de CABA</h2>
                         </div>
-                        <span>“What hurts today makes you stronger tomorrow.”</span>
-                        <p>We are offering internationally certified 200 Hour Yoga Teacher Training in Rishikesh and 300
-                            hour yoga teacher training in Rishikesh, India - Join us to have such life-transforming
-                            experience in The world capital of Yoga in Rishikesh.</p>
-                        <p class="para-2">Zogin is a great place for those who are in search of the ancient practice and
-                            true essence of yoga, meditation, health, peace and learning the art of creating a class to
-                            teach safely. We are passionate about adjustments and mainly focus on the alignment of the
-                            asanas.</p>
-                        <a href="#" class="primary-btn">MORE ABOUT US</a>
+                        <span>"El paso mas importante es empezar"</span>
+                        <p>Aqui en la UPED somos fieles creyentes que no podras saber si eres realmente bueno en algo hasta que lo intentes,
+                            hemos visto como muchos de nuestros concursantes se inspiraban y 
+                            decidian entrenar hasta volverse extremadamente buenos.
+                        </p>
+                        <p class="para-2">¡VOS podes ser como ellos! concursa en esta carrera con novatos y experimentados, y mostrate a vos 
+                            mismo de que eres capaz.
+                        </p>
+                        <a href="{{ url_for('registracion') }}" class="primary-btn">REGISTRARSE</a>
                     </div>
                 </div>
             </div>
@@ -71,110 +67,59 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="chooseus__text">
-                        <h2>Why Choose Us</h2>
-                        <p>We are offering internationally certified 200 Hour Yoga Teacher Training in Rishikesh and 300
-                            hour yoga teacher training in Rishikesh, India - Join us to have such life-transforming
-                            experience in The world capital of Yoga in Rishikesh.</p>
+                        <h2>{{diccionario["nombre"]}}</h2>
+                        <p>{{diccionario["descripcion"]}}</p>
                     </div>
+                    {% for datos in diccionario.imgdatos.values() %}
                     <div class="chooseus__item">
                         <div class="chooseus__item__icon">
-                            <img src="{{url_for('static' , filename='img/chooseus/choose-1.png') }}" alt="choose-1">
+                            <img src="{{url_for('static' , filename='img/chooseus/' ~ datos.archivo) }}" alt="icon">
                         </div>
-                        <div class="chooseus__item__text">
-                            <h2>8</h2>
-                            <p>Students</p>
-                        </div>
-                    </div>
-                    <div class="chooseus__item">
-                        <div class="chooseus__item__icon">
-                            <img src="{{url_for('static' , filename='img/chooseus/choose-2.png') }}" alt="choose-2">
-                        </div>
-                        <div class="chooseus__item__text">
-                            <h2>15</h2>
-                            <p>Years Of Experience</p>
+                       <div class="chooseus__item__text">
+                            <h5>{{diccionario[datos.clave]}}</h5>
+                            <p>{{datos.texto}}</p>
                         </div>
                     </div>
-                    <div class="chooseus__item">
-                        <div class="chooseus__item__icon">
-                            <img src="{{url_for('static' , filename='img/chooseus/choose-3.png') }}" alt="choose-3">
-                        </div>
-                        <div class="chooseus__item__text">
-                            <h2>48</h2>
-                            <p>Branches</p>
-                        </div>
-                    </div>
-                    <div class="chooseus__item">
-                        <div class="chooseus__item__icon">
-                            <img src="{{url_for('static' , filename='img/chooseus/choose-4.png') }}" alt="choose-4">
-                        </div>
-                        <div class="chooseus__item__text">
-                            <h2>234</h2>
-                            <p>Expert Staffs</p>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
                 <div class="col-lg-6">
                     <div class="chooseus__pic">
-                        <img src="{{url_for('static' , filename='img/chooseus/choose-pic.jpg') }}" alt="choose-pic">
+                        <img src="{{url_for('static' , filename='img/chooseus/chooseus.jpg') }}" alt="chooseus.png">
                     </div>
-                </div>
             </div>
         </div>
     </section>
     <!-- Chooseus Section End -->
 
     <!-- Classes Section Begin -->
-    <section class="upcoming-classes spad">
+    <section class="¿Necesitas ayuda?">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title normal-title">
-                        <h2>Upcoming Courses</h2>
-                        <p>The trainings are multi-style and you will learn and practice Hatha Vinyasa (flow)<br /> and
-                            Yin Yoga.</p>
+                        <h2>¿Necesitas ayuda?</h2>
+                        <p>En esta parte ofrecemos tenes diferentes guias, reglamentos e informacion <br>
+                            sobre el evento ¡para que todos puedan ir bien preparados!</p>
                     </div>
                 </div>
             </div>
             <div class="row">
+            {% for datos in diccionario.pdfs.values() %}
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="classes__item">
-                        <div class="classes__item__pic set-bg" data-setbg="{{url_for('static', filename='img/classes/classes-1.jpg') }}">
-                            <span>20 Jun 2019</span>
+                    
+                        <div class="classes__item__pic">
+                            <span>{{ datos.palabra }}</span>
                         </div>
-                        <div class="classes__item__text">
-                            <p>14 Days | Start on 10th Every Month</p>
-                            <h4><a href="#">100 Hour Yoga Course Rishikesh</a></h4>
-                            <h6>Jordan Lawson <span>- Yoga Teacher</span></h6>
-                            <a href="#" class="class-btn">JOIN NOW</a>
+                        <div class="classes__item__text text-center">
+                            <h4> {{ datos.titulo }} </h4>
+                            <h6> {{ datos.autor }} </h6>
+                            <a href="{{ url_for('static', filename='pdfs/' ~ datos.link) }}" target="_blank" class="class-btn">ABRIR</a>
                         </div>
+                    
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="classes__item">
-                        <div class="classes__item__pic set-bg" data-setbg="{{url_for('static', filename='img/classes/classes-2.jpg') }}">
-                            <span>20 Jun 2019</span>
-                        </div>
-                        <div class="classes__item__text">
-                            <p>14 Days | Start on 10th Every Month</p>
-                            <h4><a href="#">200 Hour Yoga Course Rishikesh</a></h4>
-                            <h6>Jordan Lawson <span>- Yoga Teacher</span></h6>
-                            <a href="#" class="class-btn">JOIN NOW</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="classes__item">
-                        <div class="classes__item__pic set-bg" data-setbg="img/classes/classes-3.jpg">
-                            <span>20 Jun 2019</span>
-                        </div>
-                        <div class="classes__item__text">
-                            <p>14 Days | Start on 10th Every Month</p>
-                            <h4><a href="#">300 Hour Yoga Course Rishikesh</a></h4>
-                            <h6>Jordan Lawson <span>- Yoga Teacher</span></h6>
-                            <a href="#" class="class-btn">JOIN NOW</a>
-                        </div>
-                    </div>
-                </div>
+            {% endfor %}
             </div>
         </div>
     </section>
@@ -211,52 +156,23 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="instructor__item">
-                        <div class="instructor__item__pic">
-                            <img src="{{url_for('static' , filename='img/instructor/instructor-1.jpg') }}" alt="instructor-1.jpg">
-                        </div>
-                        <div class="instructor__item__text">
-                            <h5>Emma Hale</h5>
-                            <span>Yoga Trainer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="instructor__item">
-                        <div class="instructor__item__pic">
-                            <img src="{{url_for('static' , filename='img/instructor/instructor-2.jpg') }}" alt="instructor-2.jpg">
-                        </div>
-                        <div class="instructor__item__text">
-                            <h5>Rebecca James</h5>
-                            <span>Yoga Trainer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="instructor__item">
-                        <div class="instructor__item__pic">
-                            <img src="{{url_for('static' , filename='img/instructor/instructor-3.jpg') }}" alt="instructor-3.jpg">
-                        </div>
-                        <div class="instructor__item__text">
-                            <h5>Melissa Smith</h5>
-                            <span>Yoga Trainer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="instructor__item">
-                        <div class="instructor__item__pic">
-                            <img src="{{url_for('static' , filename='img/instructor/instructor-4.jpg') }}" alt="instructor-4.jpg">
-                        </div>
-                        <div class="instructor__item__text">
-                            <h5>Emily Walker</h5>
-                            <span>Yoga Trainer</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="row text-center">
+    {% for datos in diccionario.imgausp.values() %}
+    <div class="col-lg-3 col-md-3 col-sm-6 mb-4">
+        <div class="instructor">
+            <div class="instructor__pic">
+                <img src="{{ url_for('static', filename='img/instructor/' ~ datos.archivo ) }}" 
+                     alt="{{ datos.texto }}" 
+                     class="img-fluid">
             </div>
+            <div class="instructor__item__text mt-2">
+                <h5>{{ datos.texto }}</h5>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
         </div>
     </section>
     <!-- Team Section End -->
@@ -265,53 +181,19 @@
     <section class="testimonial spad">
         <div class="container">
             <div class="testimonial__slider owl-carousel">
+                {% for datos in diccionario.citas.values() %}
                 <div class="testimonial__item">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-10">
                             <div class="testimonial__text">
-                                <p>Desde que fui en bicicleta en los bosques de palermo, mi vida y mi forma de ver el mundo cambio por completo.</p>
-                                <img src="{{url_for('static' , filename='img/testimonial/testimonial-1.png') }}" alt="testimonial-1.png">
-                                <h5>Linnie Walton <span>- Trainer</span></h5>
+                                <p> {{ datos.cita }} </p>
+                                <img src="{{url_for('static' , filename='img/testimonial/' ~ datos.archivo) }}" alt="testimonial-1.png">
+                                <h5> {{ datos.nombre }} </h5>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial__item">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-lg-10">
-                            <div class="testimonial__text">
-                                <p>This is my second time completing a 200 hr TTC from Zogin and I loved the experiences
-                                    even more than the first time that I had done in 2015.</p>
-                                <img src="{{url_for('static' , filename='img/testimonial/testimonial-1.png') }}" alt="testimonial-1.png">
-                                <h5>Linnie Walton <span>- Trainer</span></h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial__item">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-lg-10">
-                            <div class="testimonial__text">
-                                <p>This is my second time completing a 200 hr TTC from Zogin and I loved the experiences
-                                    even more than the first time that I had done in 2016.</p>
-                                <img src="{{url_for('static' , filename='img/testimonial/testimonial-1.png') }}" alt="testimonial-1.png">
-                                <h5>Linnie Walton <span>- Trainer</span></h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial__item">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-lg-10">
-                            <div class="testimonial__text">
-                                <p>This is my second time completing a 200 hr TTC from Zogin and I loved the experiences
-                                    even more than the first time that I had done in 2017.</p>
-                                <img src="{{url_for('static' , filename='img/testimonial/testimonial-1.png') }}" alt="testimonial-1.png">
-                                <h5>Linnie Walton <span>- Trainer</span></h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
