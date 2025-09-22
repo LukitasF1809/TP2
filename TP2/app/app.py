@@ -21,10 +21,11 @@ diccionario = {
     4: {"archivo":"auspiciante4.png","texto":"Gobierno de la ciudad"},
 },
 "imgdatos": {
-    1: {"archivo":"logohorario.png","clave":"horario"}, 
-    2: {"archivo":"logolugar.png","clave":"lugar"},
-    3: {"archivo":"logotipocarr.png","clave":"tipocarr"},   
-    4: {"archivo":"logofecha.png","clave":"fecha"}}
+    1: {"archivo":"logohorario.png","clave":"horario","texto":"Horario"}, 
+    2: {"archivo":"logolugar.png","clave":"lugar","texto":"Ubicación"},
+    3: {"archivo":"logotipocarr.png","clave":"tipocarr","texto":"Tipo de carrera"},   
+    4: {"archivo":"logofecha.png","clave":"fecha","texto":"Fecha"},
+    }
 }
 
 
