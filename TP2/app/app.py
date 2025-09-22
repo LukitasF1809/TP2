@@ -7,9 +7,9 @@ diccionario = {
     "organizador": "club unidos por el deporte",
     "fecha": "21-2-2026",
     "descripcion": "Una carrera de ciclismo en los bosques de palermo que combina deporte, naturaleza y diversion,Un recorrido unico para disfrutar pedaleando en uno de los lugares mas emblematicos de Buenos Aires.",
-    "horario": "9:00 AM hasta las 5:00 PM",
+    "horario": "9:00 a 18:00",
     "tipocarr": "MTB urbano",
-    "lugar": "Bosques de palermo, Buenos Aires, Argentina",
+    "lugar": "Bosques de palermo",
     "modalidad": {
         1: {"nombre": "carrera corta", "distancia": "50km", "dificultad": "media"},
         2: {"nombre": "carrera larga", "distancia": "100km", "dificultad": "avanzada"},
