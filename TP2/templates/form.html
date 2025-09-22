@@ -1,28 +1,7 @@
-<!DOCTYPE html>
-<html lang="zxx">
+{% extends "base.html" %}
+{% block title %}Formulario{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Directing Template">
-    <meta name="keywords" content="Directing, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Zogin | Template</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="{{url_for('static' , filename='css/bootstrap.min.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{url_for('static' , filename='css/font-awesome.min.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{url_for('static' , filename='css/elegant-icons.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{url_for('static' , filename='css/nice-select.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{url_for('static' , filename='css/barfiller.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{url_for('static' , filename='css/owl.carousel.min.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{url_for('static' , filename='css/slicknav.min.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{url_for('static' , filename='css/style.css') }}" type="text/css">
-</head>
-
+{% block content %}
 <body>
     
 <!-- Appoinment Section Begin -->
