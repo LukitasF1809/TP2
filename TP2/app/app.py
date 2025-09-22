@@ -71,20 +71,26 @@ def registracion():
         email = request.form.get("email")
         num = request.form.get("num")
         info = request.form.get("info")
-        mensaje = f"Sus datos han sido enviados ¡Gracias por participar!"
+        if not info or info.strip() == "":
+            info = "No se envió información adicional"
 
-        correo = Message(
-            subject="Nueva registración",
-            recipients=["ciclismouped@gmail.com"],  # tu correo donde recibís los formularios
-        )
-        correo.html = f"""
-                        <h2>Nueva registración recibida</h2>
-                        <p><strong>Nombre:</strong> {nombre}</p>
-                        <p><strong>Email:</strong> {email}</p>
-                        <p><strong>Celular:</strong> {num}</p>
-                        <p><strong>Info adicional:</strong> {info}</p>
-                    """
-        mail.send(correo)    
+        if not nombre or not email or not num:
+            mensaje = f"Por favor rellene todos los campos obligatorios"
+        else:
+            mensaje = f"Sus datos han sido enviados ¡Gracias por participar!"
+
+            correo = Message(
+                subject="Nueva registración",
+                recipients=["ciclismouped@gmail.com"],  # tu correo donde recibís los formularios
+            )
+            correo.html = f"""
+                            <h2>Nueva registración recibida</h2>
+                            <p><strong>Nombre:</strong> {nombre}</p>
+                            <p><strong>Email:</strong> {email}</p>
+                            <p><strong>Celular:</strong> {num}</p>
+                            <p><strong>Info adicional:</strong> {info}</p>
+                        """
+            mail.send(correo)    
 
     return render_template('form.html', mensaje=mensaje)
 
