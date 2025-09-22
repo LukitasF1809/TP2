@@ -22,11 +22,10 @@ diccionario = {
     4: "auspiciante4.png",
 },
 "imgdatos": {
-    1: "logohorario.png",
-    2: "logolugar.png",
-    3: "logotipocarr.png",
-    4: "logofecha.png",        
-    }
+    1: {"archivo":"logohorario.png","clave":"horario"}, 
+    2: {"archivo":"logolugar.png","clave":"lugar"},
+    3: {"archivo":"logotipocarr.png","clave":"tipocarr"},   
+    4: {"archivo":"logofecha.png","clave":"fecha"}}
 }
 
 
