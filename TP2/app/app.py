@@ -70,6 +70,7 @@ def registracion():
         nombre = request.form.get("name")
         email = request.form.get("email")
         num = request.form.get("num")
+        modalidad= request.form.get("modalidad")
         info = request.form.get("info")
         if not info or info.strip() == "":
             info = "No se envió información adicional"
@@ -88,11 +89,12 @@ def registracion():
                             <p><strong>Nombre:</strong> {nombre}</p>
                             <p><strong>Email:</strong> {email}</p>
                             <p><strong>Celular:</strong> {num}</p>
-                            <p><strong>Info adicional:</strong> {info}</p>
+                            <p><strong>Modalidad:</stong> {modalidad} </p>
+                            <p><br><strong>Info adicional:</strong> {info}</p>
                         """
             mail.send(correo)    
 
-    return render_template('form.html', mensaje=mensaje)
+    return render_template('form.html', mensaje=mensaje, diccionario=diccionario)
 
 if __name__ == "__main__":
     app.run("127.0.0.1", port=8081, debug =True)
