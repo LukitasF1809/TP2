@@ -203,7 +203,7 @@
                     {%for key,datos in diccionario.imgdatos.items() %}
                     <div class="chooseus__item">
                         <div class="chooseus__item__icon">
-                            <img src="{{url_for('static' , filename=datos.imagen) }}" alt="icon">
+                            <img src="{{url_for('static' , filename=datos.archivo) }}" alt="icon">
                         </div>
                        <div class="chooseus__item__text">
                             <h5>{{diccionario[datos.clave]}}</h5>
