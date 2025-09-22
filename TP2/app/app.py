@@ -10,7 +10,7 @@ diccionario = {
     "horario": "9:00 AM hasta las 5:00 PM",
     "tipocarr": "MTB urbano",
     "lugar": "Bosques de palermo, Buenos Aires, Argentina",
-    "auspiciantes": ["powerade", "adidas", "shimano", "gobierno de la ciudad de buenos aires"],
+    "auspiciantes": ["Gatorade", "Adidas", "Shimano", "Gobierno de la ciudad de Buenos Aires"],
     "modalidad": {
         1: {"nombre": "carrera corta", "distancia": "50km", "dificultad": "media"},
         2: {"nombre": "carrera larga", "distancia": "100km", "dificultad": "avanzada"},
