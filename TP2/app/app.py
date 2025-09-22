@@ -7,25 +7,25 @@ diccionario = {
     "organizador": "club unidos por el deporte",
     "fecha": "21-2-2026",
     "descripcion": "Una carrera de ciclismo en los bosques de palermo que combina deporte, naturaleza y diversion,Un recorrido unico para disfrutar pedaleando en uno de los lugares mas emblematicos de Buenos Aires.",
-    "horario": "9:00-17:00",
+    "horario": "9:00 a 18:00",
     "tipocarr": "MTB urbano",
     "lugar": "Bosques de palermo",
-    "auspiciantes": ["Gatorade", "Adidas", "Shimano", "Gobierno de la ciudad de Buenos Aires"],
     "modalidad": {
         1: {"nombre": "carrera corta", "distancia": "50km", "dificultad": "media"},
         2: {"nombre": "carrera larga", "distancia": "100km", "dificultad": "avanzada"},
     },
-"imagenes": {
-    1: "auspiciante1.png",
-    2: "auspiciante2.png",
-    3: "auspiciante3.png",
-    4: "auspiciante4.png",
+"imgausp": {
+    1: {"archivo":"auspiciante1.png","texto":"ADIDAS"},
+    2: {"archivo":"auspiciante3.png","texto":"GATORADE"},
+    3: {"archivo":"auspiciante2.png","texto":"SHIMANO"},
+    4: {"archivo":"auspiciante4.png","texto":"GOBIERNO DE LA CIUDAD"},
 },
 "imgdatos": {
-    1: {"archivo":"logohorario.png","clave":"horario", "texto": "Horario"}, 
-    2: {"archivo":"logolugar.png","clave":"lugar", "texto": "Ubicacion"},
-    3: {"archivo":"logotipocarr.png","clave":"tipocarr", "texto": "Tipo de carrera"},   
-    4: {"archivo":"logofecha.png","clave":"fecha", "texto": "Fecha"}}
+    1: {"archivo":"logohorario.png","clave":"horario","texto":"Horario"}, 
+    2: {"archivo":"logolugar.png","clave":"lugar","texto":"Ubicación"},
+    3: {"archivo":"logotipocarr.png","clave":"tipocarr","texto":"Tipo de carrera"},   
+    4: {"archivo":"logofecha.png","clave":"fecha","texto":"Fecha"},
+    }
 }
 
 
@@ -40,4 +40,4 @@ def registracion():
     return render_template('form.html')
 
 if __name__ == "__main__":
-    app.run("127.0.0.1", port=8080, debug =True)
+    app.run("127.0.0.1", port=8081, debug =True)

@@ -200,13 +200,13 @@
                         <h2>{{diccionario["nombre"]}}</h2>
                         <p>{{diccionario["descripcion"]}}</p>
                     </div>
-                    {% for key,datos in diccionario.imgdatos.items() %}
+                    {%for key,datos in diccionario.imgdatos.items() %}
                     <div class="chooseus__item">
                         <div class="chooseus__item__icon">
-                            <img src="{{url_for('static' , filename=datos.imagen) }}" alt="icon">
+                            <img src="{{url_for('static' , filename=datos.archivo) }}" alt="icon">
                         </div>
                        <div class="chooseus__item__text">
-                            <h3>{{diccionario[datos.clave]}}</h3>
+                            <h5>{{diccionario[datos.clave]}}</h5>
                             <p>{{datos.texto}}</p>
                         </div>
                     </div>
@@ -214,7 +214,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="chooseus__pic">
-                        <img src="{{url_for('static' , filename='img/chooseus/chooseus.jpg') }}" alt="chooseus.png">
+                        <img src="{{url_for('static' , filename='img/chooseus/chooseus.png') }}" alt="chooseus.png">
                     </div>
             </div>
         </div>
@@ -309,52 +309,23 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="instructor__item">
-                        <div class="instructor__item__pic">
-                            <img src="{{url_for('static' , filename='img/instructor/instructor-1.jpg') }}" alt="instructor-1.jpg">
-                        </div>
-                        <div class="instructor__item__text">
-                            <h5>Emma Hale</h5>
-                            <span>Yoga Trainer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="instructor__item">
-                        <div class="instructor__item__pic">
-                            <img src="{{url_for('static' , filename='img/instructor/instructor-2.jpg') }}" alt="instructor-2.jpg">
-                        </div>
-                        <div class="instructor__item__text">
-                            <h5>Rebecca James</h5>
-                            <span>Yoga Trainer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="instructor__item">
-                        <div class="instructor__item__pic">
-                            <img src="{{url_for('static' , filename='img/instructor/instructor-3.jpg') }}" alt="instructor-3.jpg">
-                        </div>
-                        <div class="instructor__item__text">
-                            <h5>Melissa Smith</h5>
-                            <span>Yoga Trainer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="instructor__item">
-                        <div class="instructor__item__pic">
-                            <img src="{{url_for('static' , filename='img/instructor/instructor-4.jpg') }}" alt="instructor-4.jpg">
-                        </div>
-                        <div class="instructor__item__text">
-                            <h5>Emily Walker</h5>
-                            <span>Yoga Trainer</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="row text-center">
+    {% for key, datos in diccionario.imgausp.items() %}
+    <div class="col-lg-3 col-md-3 col-sm-6 mb-4">
+        <div class="instructor">
+            <div class="instructor__pic">
+                <img src="{{ url_for('static', filename='img/instructor/' ~ datos.archivo) }}" 
+                     alt="{{ datos.texto }}" 
+                     class="img-fluid">
             </div>
+            <div class="instructor__item__text mt-2">
+                <h5>{{ datos.texto }}</h5>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
         </div>
     </section>
     <!-- Team Section End -->
