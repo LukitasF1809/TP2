@@ -1,6 +1,20 @@
-from flask import Flask, render_template
+from dotenv import load_dotenv
+from flask import Flask, render_template, request
+from flask_mail import Mail, Message
+import os
 
 app = Flask (__name__,template_folder='../templates',static_folder='../static')
+
+load_dotenv()
+
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = ("MTB Bosques", "ciclismouped@gmail.com")
+mail = Mail(app)
 
 diccionario = {
     "nombre": "MTB bosques de palermo 2026",
@@ -50,8 +64,29 @@ def home():
 
 @app.route("/registracion", methods=['POST', 'GET'])
 def registracion():
+    mensaje= None
 
-    return render_template('form.html')
+    if request.method == "POST":
+        nombre = request.form.get("name")
+        email = request.form.get("email")
+        num = request.form.get("num")
+        info = request.form.get("info")
+        mensaje = f"Sus datos han sido enviados ¡Gracias por participar!"
+
+        correo = Message(
+            subject="Nueva registración",
+            recipients=["ciclismouped@gmail.com"],  # tu correo donde recibís los formularios
+        )
+        correo.html = f"""
+                        <h2>Nueva registración recibida</h2>
+                        <p><strong>Nombre:</strong> {nombre}</p>
+                        <p><strong>Email:</strong> {email}</p>
+                        <p><strong>Celular:</strong> {num}</p>
+                        <p><strong>Info adicional:</strong> {info}</p>
+                    """
+        mail.send(correo)    
+
+    return render_template('form.html', mensaje=mensaje)
 
 if __name__ == "__main__":
     app.run("127.0.0.1", port=8081, debug =True)
