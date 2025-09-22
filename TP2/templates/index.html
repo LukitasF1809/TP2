@@ -200,49 +200,22 @@
                         <h2>{{diccionario["nombre"]}}</h2>
                         <p>{{diccionario["descripcion"]}}</p>
                     </div>
-                    
+                    {%for key,datos in diccionario.imgdatos.items() %}
                     <div class="chooseus__item">
                         <div class="chooseus__item__icon">
-                            <img src="{{url_for('static' , filename='img/chooseus/choose-1.png') }}" alt="choose-1">
+                            <img src="{{url_for('static' , filename=datos.imagen) }}" alt="icon">
                         </div>
-                        <div class="chooseus__item__text">
-                            <h2>8</h2>
-                            <p>Students</p>
-                        </div>
-                    </div>
-                    <div class="chooseus__item">
-                        <div class="chooseus__item__icon">
-                            <img src="{{url_for('static' , filename='img/chooseus/choose-2.png') }}" alt="choose-2">
-                        </div>
-                        <div class="chooseus__item__text">
-                            <h2>15</h2>
-                            <p>Years Of Experience</p>
+                       <div class="chooseus__item__text">
+                            <h2>{{diccionario[datos.clave]}}</h2>
+                            <p>{{datos.texto}}</p>
                         </div>
                     </div>
-                    <div class="chooseus__item">
-                        <div class="chooseus__item__icon">
-                            <img src="{{url_for('static' , filename='img/chooseus/choose-3.png') }}" alt="choose-3">
-                        </div>
-                        <div class="chooseus__item__text">
-                            <h2>48</h2>
-                            <p>Branches</p>
-                        </div>
-                    </div>
-                    <div class="chooseus__item">
-                        <div class="chooseus__item__icon">
-                            <img src="{{url_for('static' , filename='img/chooseus/choose-4.png') }}" alt="choose-4">
-                        </div>
-                        <div class="chooseus__item__text">
-                            <h2>234</h2>
-                            <p>Expert Staffs</p>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
                 <div class="col-lg-6">
                     <div class="chooseus__pic">
-                        <img src="{{url_for('static' , filename='img/chooseus/choose-pic.jpg') }}" alt="choose-pic">
+                        <img src="{{url_for('static' , filename='img/chooseus/chooseus.png') }}" alt="chooseus.png">
                     </div>
-                </div>
             </div>
         </div>
     </section>
