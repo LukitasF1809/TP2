@@ -10,16 +10,15 @@ diccionario = {
     "horario": "9:00 AM hasta las 5:00 PM",
     "tipocarr": "MTB urbano",
     "lugar": "Bosques de palermo, Buenos Aires, Argentina",
-    "auspiciantes": ["Gatorade", "Adidas", "Shimano", "Gobierno de la ciudad de Buenos Aires"],
     "modalidad": {
         1: {"nombre": "carrera corta", "distancia": "50km", "dificultad": "media"},
         2: {"nombre": "carrera larga", "distancia": "100km", "dificultad": "avanzada"},
     },
-"imagenes": {
-    1: "auspiciante1.png",
-    2: "auspiciante2.png",
-    3: "auspiciante3.png",
-    4: "auspiciante4.png",
+"imgausp": {
+    1: {"archivo":"auspiciante1.png","texto":"Adidas"},
+    2: {"archivo":"auspiciante2.png","texto":"Gatorade"},
+    3: {"archivo":"auspiciante3.png","texto":"Shimano"},
+    4: {"archivo":"auspiciante4.png","texto":"Gobierno de la ciudad"},
 },
 "imgdatos": {
     1: {"archivo":"logohorario.png","clave":"horario"}, 

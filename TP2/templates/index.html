@@ -311,46 +311,17 @@
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6">
+                {%for key,datos in diccionario.imgausp.items() %}
                     <div class="instructor__item">
                         <div class="instructor__item__pic">
-                            <img src="{{url_for('static' , filename='img/instructor/instructor-1.jpg') }}" alt="instructor-1.jpg">
+                            <img src="{{url_for('static' , filename=datos.imgausp) }}" alt="imagen">
                         </div>
-                        <div class="instructor__item__text">
-                            <h5>Emma Hale</h5>
-                            <span>Yoga Trainer</span>
+                       <div class="instructor__item__text">
+                            <h2>{{diccionario[datos.texto]}}</h2>
+                            
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="instructor__item">
-                        <div class="instructor__item__pic">
-                            <img src="{{url_for('static' , filename='img/instructor/instructor-2.jpg') }}" alt="instructor-2.jpg">
-                        </div>
-                        <div class="instructor__item__text">
-                            <h5>Rebecca James</h5>
-                            <span>Yoga Trainer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="instructor__item">
-                        <div class="instructor__item__pic">
-                            <img src="{{url_for('static' , filename='img/instructor/instructor-3.jpg') }}" alt="instructor-3.jpg">
-                        </div>
-                        <div class="instructor__item__text">
-                            <h5>Melissa Smith</h5>
-                            <span>Yoga Trainer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="instructor__item">
-                        <div class="instructor__item__pic">
-                            <img src="{{url_for('static' , filename='img/instructor/instructor-4.jpg') }}" alt="instructor-4.jpg">
-                        </div>
-                        <div class="instructor__item__text">
-                            <h5>Emily Walker</h5>
-                            <span>Yoga Trainer</span>
+                    {% endfor %}
                         </div>
                     </div>
                 </div>
