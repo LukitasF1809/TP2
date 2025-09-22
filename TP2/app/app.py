@@ -15,10 +15,10 @@ diccionario = {
         2: {"nombre": "carrera larga", "distancia": "100km", "dificultad": "avanzada"},
     },
 "imgausp": {
-    1: {"archivo":"auspiciante1.png","texto":"Adidas"},
-    2: {"archivo":"auspiciante2.png","texto":"Gatorade"},
-    3: {"archivo":"auspiciante3.png","texto":"Shimano"},
-    4: {"archivo":"auspiciante4.png","texto":"Gobierno de la ciudad"},
+    1: {"archivo":"auspiciante1.png","texto":"ADIDAS"},
+    2: {"archivo":"auspiciante3.png","texto":"GATORADE"},
+    3: {"archivo":"auspiciante2.png","texto":"SHIMANO"},
+    4: {"archivo":"auspiciante4.png","texto":"GOBIERNO DE LA CIUDAD"},
 },
 "imgdatos": {
     1: {"archivo":"logohorario.png","clave":"horario","texto":"Horario"}, 
@@ -40,4 +40,4 @@ def registracion():
     return render_template('form.html')
 
 if __name__ == "__main__":
-    app.run("127.0.0.1", port=8080, debug =True)
+    app.run("127.0.0.1", port=8081, debug =True)
