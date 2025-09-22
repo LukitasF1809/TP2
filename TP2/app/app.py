@@ -75,7 +75,7 @@ def registracion():
         if not info or info.strip() == "":
             info = "No se envió información adicional"
 
-        if not nombre or not email or not num:
+        if not nombre or not email or not num or not modalidad:
             mensaje = f"Por favor rellene todos los campos obligatorios"
         else:
             mensaje = f"Sus datos han sido enviados ¡Gracias por participar!"

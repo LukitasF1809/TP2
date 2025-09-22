@@ -1436,9 +1436,15 @@ ol {
 	background: #ffffff;
 }
 
+.btn-modalidad:hover {
+    border: 2x solid rgb(0, 38, 73);
+    background-color: #0051a1;
+    color: white;
+}
+
 .btn-modalidad.active {
-    border: 1px solid #000b31;
-    background-color: #8f1818;
+    border: 2x solid #7c3e00;
+    background-color: #006609;
     color: white;
 }
 
@@ -2140,6 +2146,7 @@ ol {
 	right: 0;
 	top: 0;
 	font-size: 16px;
+	border: 2x solid rgb(156, 156, 156);
 	color: #9B9EA3;
 	height: 100%;
 	padding: 0 15px;
