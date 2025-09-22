@@ -1441,7 +1441,7 @@ ol {
 }
 
 .classes__item__pic {
-	height: 241px;
+	height: 40px;
 	position: relative;
 }
 
@@ -1458,7 +1458,7 @@ ol {
 }
 
 .classes__item__text {
-	padding: 24px 0 28px 30px;
+	padding: 24px 0 28px 12px;
 }
 
 .classes__item__text ul {
@@ -1487,7 +1487,7 @@ ol {
 }
 
 .classes__item__text h4 {
-	margin-bottom: 50px;
+	margin-bottom: 10px;
 }
 
 .classes__item__text h4 a {
@@ -1571,6 +1571,12 @@ ol {
 	border-color: #003366;
 	color: #ffffff;
 }
+
+.text-center {
+	text-align: center;
+}
+
+
 
 /*---------------------
   Classes Details
@@ -3041,3 +3047,5 @@ ol {
 		font-size: 16px;
 	}
 }
+
+

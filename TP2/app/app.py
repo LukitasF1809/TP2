@@ -25,7 +25,21 @@ diccionario = {
     2: {"archivo":"logolugar.png","clave":"lugar","texto":"Ubicación"},
     3: {"archivo":"logotipocarr.png","clave":"tipocarr","texto":"Tipo de carrera"},   
     4: {"archivo":"logofecha.png","clave":"fecha","texto":"Fecha"},
-    }
+    },
+
+"pdfs": {
+    1: {"palabra":"Guia","titulo": "Guia del ciclista","autor":"Gobierno de buenos aires","link":"guia.pdf"}, 
+    2: {"palabra":"Reglamento","titulo":"Reglamentos de la carrera","autor":"Union internacional del ciclismo","link":"reglamento.pdf"},
+    3: {"palabra":"Palermo","titulo":"Informacion sobre palermo","autor":"Ministerio de desarrollo urbano","link":"palermo.pdf"},
+    },
+
+"citas": {
+    1: {"archivo":"testimonial-1.png","cita":"Desde que fui en bicicleta en los bosques de palermo, mi vida y mi forma de ver el mundo cambio por completo.","nombre":"Gustavo Cerati"}, 
+    2: {"archivo":"testimonial-3.png","cita":"No me pregunten como, pero cuando termine esta carrera, la termine como una persona totalmente diferente","nombre":"Javier Milei"},
+    3: {"archivo":"testimonial-2.png","cita":"Al principio dudaba de ir a la carrera, pero una vez fui, ¡Nunca estuve mas feliz de haber participado!","nombre":"niqui nicol(?)"},   
+    4: {"archivo":"testimonial-4.png","cita":"Yyy la verdad que mucho no me gusto la carrera","nombre":"Un random que a nadie le importa"},
+    },
+
 }
 
 
