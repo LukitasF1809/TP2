@@ -7,9 +7,9 @@ diccionario = {
     "organizador": "club unidos por el deporte",
     "fecha": "21-2-2026",
     "descripcion": "Una carrera de ciclismo en los bosques de palermo que combina deporte, naturaleza y diversion,Un recorrido unico para disfrutar pedaleando en uno de los lugares mas emblematicos de Buenos Aires.",
-    "horario": "9:00 AM hasta las 5:00 PM",
+    "horario": "9:00-17:00",
     "tipocarr": "MTB urbano",
-    "lugar": "Bosques de palermo, Buenos Aires, Argentina",
+    "lugar": "Bosques de palermo",
     "auspiciantes": ["Gatorade", "Adidas", "Shimano", "Gobierno de la ciudad de Buenos Aires"],
     "modalidad": {
         1: {"nombre": "carrera corta", "distancia": "50km", "dificultad": "media"},
@@ -22,10 +22,10 @@ diccionario = {
     4: "auspiciante4.png",
 },
 "imgdatos": {
-    1: {"archivo":"logohorario.png","clave":"horario"}, 
-    2: {"archivo":"logolugar.png","clave":"lugar"},
-    3: {"archivo":"logotipocarr.png","clave":"tipocarr"},   
-    4: {"archivo":"logofecha.png","clave":"fecha"}}
+    1: {"archivo":"logohorario.png","clave":"horario", "texto": "Horario"}, 
+    2: {"archivo":"logolugar.png","clave":"lugar", "texto": "Ubicacion"},
+    3: {"archivo":"logotipocarr.png","clave":"tipocarr", "texto": "Tipo de carrera"},   
+    4: {"archivo":"logofecha.png","clave":"fecha", "texto": "Fecha"}}
 }
 
 

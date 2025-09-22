@@ -10,7 +10,7 @@
 /*------------------------------------------------------------------
 [Table of contents]
 
-1.  Template default CSSasdasdsa
+1.  Template default CSS
 	1.1	Variables
 	1.2	Mixins
 	1.3	Flexbox
@@ -30,7 +30,6 @@
 
 /* Template default CSS
 /*----------------------------------------*/
-
 html,
 body {
 	height: 100%;
@@ -170,7 +169,7 @@ ol {
 	color: #ffffff;
 	text-transform: uppercase;
 	font-weight: 700;
-	background: #5768AD;
+	background: #003366;
 	border-radius: 2px;
 	letter-spacing: 2px;
 }
@@ -182,7 +181,7 @@ ol {
 	text-transform: uppercase;
 	display: inline-block;
 	padding: 14px 50px;
-	background: #5768AD;
+	background: #003366;
 	border: none;
 	letter-spacing: 2px;
 	border-radius: 2px;
@@ -294,7 +293,7 @@ ol {
 	top: 8px;
 	height: 2px;
 	width: 2px;
-	background: #5768AD;
+	background: #003366;
 	content: "";
 	border-radius: 50%;
 }
@@ -486,7 +485,19 @@ ol {
 	height: 873px;
 	display: flex;
 	align-items: center;
+	position: relative;
+	z-index: 1;
 }
+
+.hero__items::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* negro con 50% de transparencia */
+    z-index: 2;
+}
+
 
 .hero__text span {
 	font-size: 16px;
@@ -504,6 +515,8 @@ ol {
 	-ms-transition: all, 0.2s;
 	-o-transition: all, 0.2s;
 	transition: all, 0.2s;
+	position:relative;
+	z-index:3;
 }
 
 .hero__text h2 {
@@ -512,6 +525,7 @@ ol {
 	color: #ffffff;
 	margin-bottom: 50px;
 	position: relative;
+	z-index: 3;
 	top: 100px;
 	opacity: 0;
 	-webkit-transition: all, 0.5s;
@@ -523,6 +537,7 @@ ol {
 
 .hero__text .primary-btn {
 	position: relative;
+	z-index: 3;
 	top: 100px;
 	opacity: 0;
 	-webkit-transition: all, 0.8s;
@@ -687,7 +702,7 @@ ol {
 }
 
 .appointment__text {
-	background: #5768AD;
+	background: #003366;
 	padding: 60px 100px;
 }
 
@@ -757,7 +772,7 @@ ol {
 
 .appointment__form button {
 	font-size: 14px;
-	color: #5768AD;
+	color: #003366;
 	text-transform: uppercase;
 	display: inline-block;
 	background: #ffffff;
@@ -809,7 +824,7 @@ ol {
 }
 
 .testimonial__slider.owl-carousel .owl-dots button.active {
-	background: #5768AD;
+	background: #003366;
 }
 
 .testimonial__slider.owl-carousel .owl-dots button.active:after {
@@ -832,7 +847,7 @@ ol {
 	right: 0;
 	top: 0;
 	content: '"';
-	color: #5768AD;
+	color: #003366;
 	font-size: 160px;
 	line-height: 119px;
 	margin: 0 auto;
@@ -892,7 +907,7 @@ ol {
 
 .footer__about ul li i {
 	font-size: 16px;
-	color: #5768AD;
+	color: #003366;
 	margin-right: 5px;
 }
 
@@ -915,7 +930,7 @@ ol {
 	font-size: 20px;
 	color: #ffffff;
 	display: inline-block;
-	background: #5768AD;
+	background: #003366;
 	padding: 0 15px;
 	border: none;
 	position: absolute;
@@ -973,7 +988,7 @@ ol {
 }
 
 .footer__copyright__text a {
-	color: #5768AD;
+	color: #003366;
 }
 
 .footer__copyright__social {
@@ -1165,12 +1180,12 @@ ol {
 	color: #ffffff;
 	padding: 2px 11px 1px;
 	border-radius: 10px;
-	background: #5768AD;
+	background: #003366;
 	margin-top: -40px;
 }
 
 .about__bar .about__bar__item .barfiller .tip:after {
-	border-color: #5768AD transparent;
+	border-color: #003366 transparent;
 	left: 50%;
 	top: 92%;
 	-webkit-transform: translateX(-6px);
@@ -1178,7 +1193,7 @@ ol {
 }
 
 .about__bar .about__bar__item .barfiller .fill {
-	background: #5768AD;
+	background: #003366;
 	border-radius: 50px;
 }
 
@@ -1210,7 +1225,7 @@ ol {
 }
 
 .team__item__text .team__item__title h4 {
-	color: #5768AD;
+	color: #003366;
 	margin-bottom: 4px;
 }
 
@@ -1237,7 +1252,7 @@ ol {
 }
 
 .team__item__text .team__item__social a:hover {
-	color: #5768AD;
+	color: #003366;
 }
 
 .team__item__text .team__item__social a:last-child {
@@ -1277,7 +1292,7 @@ ol {
 
 .team__slider.owl-carousel .owl-nav button:hover {
 	color: #ffffff;
-	background: #5768AD;
+	background: #003366;
 }
 
 .team__slider.owl-carousel .owl-nav button.owl-next {
@@ -1378,8 +1393,8 @@ ol {
 }
 
 .classes__filter form .class__filter__select .nice-select:after {
-	border-bottom: 2px solid #5768AD;
-	border-right: 2px solid #5768AD;
+	border-bottom: 2px solid #003366;
+	border-right: 2px solid #003366;
 	height: 8px;
 	margin-top: 0;
 	right: 20px;
@@ -1399,7 +1414,7 @@ ol {
 	height: 40px;
 	width: 42px;
 	border-radius: 2px;
-	background: #5768AD;
+	background: #003366;
 	line-height: 40px;
 	text-align: center;
 	border: none;
@@ -1436,7 +1451,7 @@ ol {
 	color: #ffffff;
 	display: inline-block;
 	padding: 7px 16px 4px;
-	background: #5768AD;
+	background: #003366;
 	position: absolute;
 	left: 0;
 	top: 10px;
@@ -1493,7 +1508,7 @@ ol {
 .classes__item__text .class-btn {
 	font-size: 14px;
 	font-weight: 700;
-	color: #5768AD;
+	color: #003366;
 	display: inline-block;
 	border: 1px solid rgba(155, 158, 163, 0.2);
 	padding: 10px 20px 7px;
@@ -1506,8 +1521,8 @@ ol {
 }
 
 .classes__item__text .class-btn:hover {
-	background: #5768AD;
-	border: 1px solid #5768AD;
+	background: #003366;
+	border: 1px solid #003366;
 	color: #ffffff;
 }
 
@@ -1552,8 +1567,8 @@ ol {
 }
 
 .classes__pagination a:hover {
-	background: #5768AD;
-	border-color: #5768AD;
+	background: #003366;
+	border-color: #003366;
 	color: #ffffff;
 }
 
@@ -1602,9 +1617,9 @@ ol {
 .classes__sidebar__item .sidebar-btn {
 	font-size: 14px;
 	font-weight: 700;
-	color: #5768AD;
+	color: #003366;
 	display: inline-block;
-	border: 1px solid #5768AD;
+	border: 1px solid #003366;
 	padding: 10px 20px 7px;
 	border-radius: 2px;
 }
@@ -1629,7 +1644,7 @@ ol {
 }
 
 .classes__sidebar__instructor__text .classes__sidebar__instructor__title h4 {
-	color: #5768AD;
+	color: #003366;
 	margin-bottom: 0;
 }
 
@@ -1657,7 +1672,7 @@ ol {
 }
 
 .classes__sidebar__instructor__text .classes__sidebar__instructor__social a:hover {
-	color: #5768AD;
+	color: #003366;
 }
 
 .classes__sidebar__instructor__text .classes__sidebar__instructor__social a:last-child {
@@ -1708,7 +1723,7 @@ ol {
 }
 
 .classes__sidebar__comment__text h6 {
-	color: #5768AD;
+	color: #003366;
 	font-weight: 700;
 	margin-top: 6px;
 	margin-bottom: 5px;
@@ -1761,7 +1776,7 @@ ol {
 	color: #ffffff;
 	display: inline-block;
 	padding: 5px 30px 4px 20px;
-	background: #5768AD;
+	background: #003366;
 	position: absolute;
 	left: 0;
 	top: 10px;
@@ -1789,7 +1804,7 @@ ol {
 }
 
 .classes__details__desc ul li span {
-	color: #5768AD;
+	color: #003366;
 	margin-right: 10px;
 }
 
@@ -1908,7 +1923,7 @@ ol {
 }
 
 .pricing__item:hover .pricing__item__price h2 {
-	color: #5768AD;
+	color: #003366;
 }
 
 .pricing__item:hover ul li {
@@ -1916,13 +1931,13 @@ ol {
 }
 
 .pricing__item:hover .primary-btn {
-	background: #5768AD;
+	background: #003366;
 }
 
 .pricing__item .pricing__item__star {
 	height: 119px;
 	width: 119px;
-	background: #5768AD;
+	background: #003366;
 	border-radius: 50%;
 	position: absolute;
 	right: -50px;
@@ -2042,7 +2057,7 @@ ol {
 }
 
 .blog__item__text h5 a:hover {
-	color: #5768AD;
+	color: #003366;
 }
 
 .blog__item__text p {
@@ -2134,7 +2149,7 @@ ol {
 }
 
 .blog__sidebar__categories ul li a:hover {
-	color: #5768AD;
+	color: #003366;
 }
 
 .blog__sidebar__recent {
@@ -2185,6 +2200,8 @@ ol {
 	color: #1C1C1C;
 	margin-bottom: 25px;
 }
+
+
 
 .blog__sidebar__tags a {
 	font-size: 16px;
@@ -2248,7 +2265,7 @@ ol {
 	color: #ffffff;
 	display: inline-block;
 	padding: 5px 30px 4px 20px;
-	background: #5768AD;
+	background: #003366;
 	position: absolute;
 	left: 0;
 	top: 10px;
@@ -2274,7 +2291,7 @@ ol {
 	top: 0;
 	height: 56px;
 	width: 2px;
-	background: #5768AD;
+	background: #003366;
 	content: "";
 }
 
@@ -2425,7 +2442,7 @@ ol {
 
 .contact__widget__item span {
 	font-size: 36px;
-	color: #5768AD;
+	color: #003366;
 }
 
 .contact__widget__item h4 {
@@ -2463,7 +2480,7 @@ ol {
 
 .map .map-inside i {
 	font-size: 48px;
-	color: #5768AD;
+	color: #003366;
 	position: absolute;
 	bottom: -75px;
 	left: 50%;
@@ -2582,7 +2599,7 @@ ol {
 	bottom: -4px;
 	height: 2px;
 	width: 100%;
-	background: #5768AD;
+	background: #003366;
 	content: "";
 	opacity: 0;
 	transition: all 0.4s;
@@ -2626,7 +2643,7 @@ ol {
 	content: "-";
 	font-size: 32px;
 	font-weight: 400;
-	color: #5768AD;
+	color: #003366;
 	position: absolute;
 	right: 0;
 	top: 4px;
@@ -2638,7 +2655,7 @@ ol {
 	content: "-";
 	font-size: 32px;
 	font-weight: 400;
-	color: #5768AD;
+	color: #003366;
 	position: absolute;
 	right: 0;
 	top: 4px;

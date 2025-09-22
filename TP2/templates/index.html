@@ -200,13 +200,13 @@
                         <h2>{{diccionario["nombre"]}}</h2>
                         <p>{{diccionario["descripcion"]}}</p>
                     </div>
-                    {%for key,datos in diccionario.imgdatos.items() %}
+                    {% for key,datos in diccionario.imgdatos.items() %}
                     <div class="chooseus__item">
                         <div class="chooseus__item__icon">
                             <img src="{{url_for('static' , filename=datos.imagen) }}" alt="icon">
                         </div>
                        <div class="chooseus__item__text">
-                            <h2>{{diccionario[datos.clave]}}</h2>
+                            <h3>{{diccionario[datos.clave]}}</h3>
                             <p>{{datos.texto}}</p>
                         </div>
                     </div>
@@ -214,7 +214,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="chooseus__pic">
-                        <img src="{{url_for('static' , filename='img/chooseus/chooseus.png') }}" alt="chooseus.png">
+                        <img src="{{url_for('static' , filename='img/chooseus/chooseus.jpg') }}" alt="chooseus.png">
                     </div>
             </div>
         </div>
