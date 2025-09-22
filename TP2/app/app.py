@@ -6,7 +6,7 @@ diccionario = {
     "nombre": "MTB bosques de palermo 2026",
     "organizador": "club unidos por el deporte",
     "fecha": "21-2-2026",
-    "descripcion": "Una carrera de mountain bike que recorre los hermosos bosques de palermo, ideal para ciclistas de todos los niveles.",
+    "descripcion": "Una carrera de ciclismo en los bosques de palermo que combina deporte, naturaleza y diversion,Un recorrido unico para disfrutar pedaleando en uno de los lugares mas emblematicos de Buenos Aires.",
     "horario": "9:00 AM hasta las 5:00 PM",
     "tipocarr": "MTB urbano",
     "lugar": "Bosques de palermo, Buenos Aires, Argentina",
@@ -15,13 +15,20 @@ diccionario = {
         1: {"nombre": "carrera corta", "distancia": "50km", "dificultad": "media"},
         2: {"nombre": "carrera larga", "distancia": "100km", "dificultad": "avanzada"},
     },
-    "imagenes": {
-        1: "auspiciante1.png",
-        2: "auspiciante2.png",
-        3: "auspiciante3.png",
-        4: "auspiciante4.png",
+"imagenes": {
+    1: "auspiciante1.png",
+    2: "auspiciante2.png",
+    3: "auspiciante3.png",
+    4: "auspiciante4.png",
+},
+"imgdatos": {
+    1: "logohorario.png",
+    2: "logolugar.png",
+    3: "logotipocarr.png",
+    4: "logofecha.png",        
     }
 }
+
 
 @app.route('/')
 def home():
