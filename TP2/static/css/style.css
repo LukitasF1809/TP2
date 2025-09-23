@@ -32,9 +32,12 @@
 /*----------------------------------------*/
 html,
 body {
-	height: 100%;
 	font-family: "DM Sans", sans-serif;
 	-webkit-font-smoothing: antialiased;
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
 h1,
@@ -3123,4 +3126,8 @@ background: #dbe0ff;
     position: relative;
     min-height: 100vh;
     background: "{{ url_for('static', filename='img/fondo.jpeg') }}" no-repeat center center/cover;
+}
+
+main {
+    flex: 1;
 }

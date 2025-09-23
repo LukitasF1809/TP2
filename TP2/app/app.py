@@ -100,5 +100,10 @@ def registracion():
 
     return render_template('form.html', mensaje=mensaje, diccionario=diccionario, unete=unete)
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+
 if __name__ == "__main__":
     app.run("127.0.0.1", port=8081, debug =True)

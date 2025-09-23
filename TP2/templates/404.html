@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}¡¿Donde estoy?!{% endblock %}
+
+{% block content %}
+
+<div style="text-align: center; padding-top: 10%; padding-bottom: 9%;">
+<h1> ERROR 404 </h1>
+<msg> ¡Ups! parece que la pagina que buscas no existe.</msg>
+<msg> Puedes volver a la pagina principal&nbsp<a class="underline-hover" href="{{ url_for('home') }}">aquí</a></msg>
+</div>
+
+{% endblock %}
