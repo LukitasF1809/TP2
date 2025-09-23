@@ -16,6 +16,7 @@ app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
 app.config['MAIL_DEFAULT_SENDER'] = ("MTB Bosques", "ciclismouped@gmail.com")
 mail = Mail(app)
 
+unete= True
 diccionario = {
     "nombre": "bosques de palermo 2026",
     "organizador": "club unidos por el deporte",
@@ -59,11 +60,13 @@ diccionario = {
 
 @app.route('/')
 def home():
-    return render_template('index.html',activate_page='home',diccionario=diccionario)
+    global unete
+    return render_template('index.html',activate_page='home',diccionario=diccionario, unete=unete)
 
 
 @app.route("/registracion", methods=['POST', 'GET'])
 def registracion():
+    global unete
     mensaje= None
 
     if request.method == "POST":
@@ -93,8 +96,9 @@ def registracion():
                             <p><br><strong>Info adicional:</strong> {info}</p>
                         """
             mail.send(correo)    
+            unete= False
 
-    return render_template('form.html', mensaje=mensaje, diccionario=diccionario)
+    return render_template('form.html', mensaje=mensaje, diccionario=diccionario, unete=unete)
 
 if __name__ == "__main__":
     app.run("127.0.0.1", port=8081, debug =True)
