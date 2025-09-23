@@ -33,16 +33,16 @@
     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu">
         <div class="offcanvas__logo">
-            <a href="./index.html"><img src="{{url_for('static' , filename='img/logo.png') }}" alt="logo"></a>
+            <a href="{{url_for ('home')}}"><img src="{{url_for('static' , filename='img/logo.png') }}" alt="logo"></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__widget">
             <ul>
-                <li>CALL US: + 1 800-567-8990</li>
-                <li>WRITE US: OFFICE@EXAMPLE.COM</li>
-                <li>OPENING TIMES: MON - FRI: 9:00 - 19:00</li>
+                <li>LLAMANOS AL +54 11 4560 9603</li>
+                <li>ESCRIBINOS: CONTACTO@UNIDOS.COM</li>
+                <li>HORARIOS: LUN - VIE: 9:00 - 19:00</li>
             </ul>
-            <a href="#" class="primary-btn">JOIN US</a>
+            <a href="{{url_for ('registracion')}}" class="primary-btn">REGISTRARSE</a>
         </div>
         <nav class="header__menu">
             <ul class="mobile-menu">
@@ -77,17 +77,17 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-3">
                         <div class="header__logo">
-                            <a href="./index.html"><img src="{{url_for('static' , filename='img/logo.png') }}" alt="logo"></a>
+                            <a href="{{url_for ('home')}}"><img src="{{url_for('static' , filename='img/logo.png') }}" alt="logo"></a>
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-9">
                         <div class="header__top__widget">
                             <ul>
-                                <li>CALL US: + 1 800-567-8990</li>
-                                <li>WRITE US: OFFICE@EXAMPLE.COM</li>
-                                <li>OPENING TIMES: MON - FRI: 9:00 - 19:00</li>
+                                <li>LLAMANOS AL +54 11 4560 9603</li>
+                                <li>ESCRIBINOS: CONTACTO@UNIDOS.COM</li>
+                                <li>HORARIOS: LUN - VIE: 9:00 - 19:00</li>
                             </ul>
-                            <a href="#" class="primary-btn">JOIN US</a>
+                            <a href="{{url_for ('registracion')}}" class="primary-btn">UNETE</a>
                         </div>
                     </div>
                 </div>
@@ -104,19 +104,9 @@
                     <div class="col-lg-9 col-md-9">
                         <nav class="header__menu">
                             <ul>
-                                <li class="active"><a href="./index.html">Home</a></li>
-                                <li><a href="./about-us.html">About</a></li>
-                                <li><a href="./classes.html">Classes</a></li>
-                                <li><a href="#">Pages</a>
-                                    <ul class="dropdown">
-                                        <li><a href="./classes-details.html">Classes Details</a></li>
-                                        <li><a href="./blog-details.html">Blog Details</a></li>
-                                        <li><a href="./pricing.html">Pricing</a></li>
-                                        <li><a href="./faq.html">Faq</a></li>
-                                    </ul>
+                                <li class="active"><a href="{{url_for ('home')}}">INICIO</a></li>
+                                <li><a href="{{url_for ('registracion')}}">REGISTRACION</a></li>
                                 </li>
-                                <li><a href="./blog.html">Blog</a></li>
-                                <li><a href="./contact.html">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -150,10 +140,6 @@
                             <li><i class="fa fa-clock-o"></i> Lun - vie: 6:30am - 07:45pm</li>
                             <li><i class="fa fa-clock-o"></i> Sab - Dom: 8:30am - 05:45pm</li>
                         </ul>
-                        <form action="#" class="subscribe-form">
-                            <input type="text" placeholder="Your Email">
-                            <button type="submit"><i class="fa fa-send"></i></button>
-                        </form>
                     </div>
                 </div>
             
