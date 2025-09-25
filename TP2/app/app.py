@@ -1,6 +1,8 @@
-from dotenv import load_dotenv
 from flask import Flask, render_template, request
+from dotenv import load_dotenv
 from flask_mail import Mail, Message
+
+
 import os
 
 app = Flask (__name__,template_folder='../templates',static_folder='../static')
@@ -16,15 +18,15 @@ app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
 app.config['MAIL_DEFAULT_SENDER'] = ("MTB Bosques", "ciclismouped@gmail.com")
 mail = Mail(app)
 
+
 unete= True
 diccionario = {
-    "nombre": "bosques de palermo 2026",
+    "nombre": "Tandil en bici 2025",
     "organizador": "club unidos por el deporte",
-    "fecha": "21-2-2026",
-    "descripcion": "Una carrera de ciclismo que comienza en los bosques de palermo y que combina deporte, naturaleza y diversion,Un recorrido unico para disfrutar pedaleando en los lugares mas emblematicos de Buenos Aires.",
-    "horario": "9:00 a 18:00",
-    "tipocarr": "Ciclismo urbano",
-    "lugar": "Bosques de palermo",
+    "fecha": "24-10-2025",
+    "descripcion": "Un evento único de ciclismo en la ciudad de Tandil, Buenos Aires. Una jornada para disfrutar del deporte, la naturaleza y los paisajes serranos en un recorrido pensado para todos los amantes de la bicicleta",
+    "tipocarr": "Ciclismo urbano y rural",
+    "lugar": "Ciudad de Tandil, Buenos Aires",
     "modalidad": {
         1: {"nombre": "carrera corta", "distancia": "30km", "dificultad": "media"},
         2: {"nombre": "carrera larga", "distancia": "80km", "dificultad": "avanzada"},
@@ -45,7 +47,8 @@ diccionario = {
 "pdfs": {
     1: {"palabra":"Guia","titulo": "Guia del ciclista","autor":"Gobierno de buenos aires","link":"guia.pdf"}, 
     2: {"palabra":"Reglamento","titulo":"Reglamentos de la carrera","autor":"Union internacional del ciclismo","link":"reglamento.pdf"},
-    3: {"palabra":"Palermo","titulo":"Informacion sobre palermo","autor":"Ministerio de desarrollo urbano","link":"palermo.pdf"},
+    3: {"palabra":"Tandil","titulo":"Informacion sobre Tandil","autor":"Municipio de Tandil","link":"palermo.pdf"},
+    4: {"palabra":"deslinde","titulo":"Deslinde","autor":"Club unidos por el deporte","link":"deslinde.pdf"},
     },
 
 "citas": {
