@@ -2714,6 +2714,13 @@ background: #dbe0ff;
 	transition: all 0.4s;
 }
 
+.underline:hover{
+
+color: red;
+text-decoration: underline;
+
+}
+
 .faq__accordion .card .card-body {
 	padding: 0;
 	padding-bottom: 30px;
@@ -3144,6 +3151,14 @@ background: #dbe0ff;
 	.map .map-inside .inside-widget {
 		width: 300px;
 	}
+
+	#map{
+
+  height: 500px;
+  width: 70%;
+
+	}
+
 	.blog__sidebar {
 		padding-right: 0;
 	}
