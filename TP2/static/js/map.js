@@ -12,7 +12,7 @@ var ruta1 = L.Routing.control({
     L.latLng(-37.340178071091856, -59.13643712952644),
     L.latLng(-37.25598097698842, -58.57359980199977)  
   ],
-  routeWhileDragging: true,
+  routeWhileDragging: false,
   language: 'es',
   lineOptions: { styles: [{ color: 'blue', opacity: 0.7, weight: 5 }] },
   createMarker: function() { return null; }
@@ -22,11 +22,11 @@ ruta1.addTo(map);
 
 var ruta2 = L.Routing.control({
   waypoints: [
-    L.latLng(-34.5675, -58.4116), // Planetario
-    L.latLng(-34.5714, -58.4222), // Parque Tres de Febrero
-    L.latLng(-34.5453, -58.4490)  // Monumental
+    L.latLng(-37.340178071091856,-59.13643712952644), // Planetario
+    
+    L.latLng(-37.36070535090289, -59.01624220295415)  // Monumental
   ],
-  routeWhileDragging: true,
+  routeWhileDragging: false,
   language: 'es',
   lineOptions: { styles: [{ color: 'red', opacity: 0.8, weight: 5, dashArray: '6, 6' }] },
   createMarker: function() { return null; }
