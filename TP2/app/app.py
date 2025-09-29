@@ -15,7 +15,7 @@ app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
 app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
-app.config['MAIL_DEFAULT_SENDER'] = ("MTB Bosques", "ciclismouped@gmail.com")
+app.config['MAIL_DEFAULT_SENDER'] = ("MTB Tandil", "ciclismouped@gmail.com")
 mail = Mail(app)
 
 
@@ -26,6 +26,7 @@ diccionario = {
     "fecha": "24-10-2025",
     "descripcion": "Un evento único de ciclismo en la ciudad de Tandil, Buenos Aires. Una jornada para disfrutar del deporte, la naturaleza y los paisajes serranos en un recorrido pensado para todos los amantes de la bicicleta",
     "tipocarr": "Ciclismo urbano y rural",
+    "horario": "9:00 a 18:00",
     "lugar": "Ciudad de Tandil, Buenos Aires",
     "modalidad": {
         1: {"nombre": "carrera corta", "distancia": "30km", "dificultad": "media"},
@@ -52,7 +53,7 @@ diccionario = {
     },
 
 "citas": {
-    1: {"archivo":"testimonial-1.png","cita":"Desde que fui en bicicleta en los bosques de palermo, mi vida y mi forma de ver el mundo cambio por completo.","nombre":"Gustavo Cerati"}, 
+    1: {"archivo":"testimonial-1.png","cita":"Desde que fui en bicicleta en tandil, mi vida y mi forma de ver el mundo cambio por completo.","nombre":"Gustavo Cerati"}, 
     2: {"archivo":"testimonial-3.png","cita":"No me pregunten como, pero cuando termine esta carrera, la termine como una persona totalmente diferente","nombre":"Javier Milei"},
     3: {"archivo":"testimonial-2.png","cita":"Al principio dudaba de ir a la carrera, pero una vez fui, ¡Nunca estuve mas feliz de haber participado!","nombre":"niqui nicol(?)"},   
     4: {"archivo":"testimonial-4.png","cita":"Yyy la verdad que mucho no me gusto la carrera","nombre":"Un random que a nadie le importa"},
