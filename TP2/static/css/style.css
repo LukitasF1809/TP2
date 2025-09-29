@@ -1776,6 +1776,36 @@ background: #dbe0ff;
 	margin-right: 30px;
 }
 
+
+/* Sección del mapa */
+#map-section {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+#map-section h2 {
+  
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  
+}
+
+#map {
+  margin: 0 auto;
+  align-items: center;
+  width: 60%;
+  height: 450px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1)
+}
+
+
+
+
+
+
+
+
 .classes__sidebar__comment__pic img {
 	height: 70px;
 	width: 70px;
