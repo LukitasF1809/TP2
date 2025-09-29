@@ -21,7 +21,9 @@ Para poder levantar el proyecto se necesita:
     -ejecutar el script 'Cinf.sh'.
 
 
-##    
+## FEATURES
+
+
 
 
 
