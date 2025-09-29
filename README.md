@@ -1,2 +1,27 @@
-# TP2
-Trabajo practico numero 2 para la materia "Introduccion al desarrollo de software"
+# EJ PRACTICO NRO 2
+Ejercicio practico numero 2 para la materia "Introduccion al desarrollo de software"
+## INTEGRANTES
+    *Lucas Matias Frati
+    *Nahuel Ignacio Pavon
+    *Patricio Nicolas Vespoli
+## ARQUITECTURA DEL PROYECTIO
+El proyecto consta de una aplicacion creada con el framework Flask, que utiliza Leaflet para poder mostrar un maca con el recorrido de la carrera y los puntos de hidratacion para la misma, ademas utiliza Flask_mail para enviar un mail con los datos de registracion.
+
+## DEPENDENCIAS 
+Para poder levantar el proyecto se necesita:
+
+    -Una version de python igual o superior a la 3.10
+    -Una API_KEY de open streetmaps
+    -Una API_KEY de gmail
+    -Instalar el entorno virtual de python en la carpeta del proyecto(puede ser pyvenv, .venv, etc.)
+
+## COMO LEVANTAR EL PROYECTO
+
+    -Configurar las API_KEYs(ya sea en un archivo .env o manualmente en la consola).
+    -ejecutar el script 'Cinf.sh'.
+
+
+##    
+
+
+

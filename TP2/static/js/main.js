@@ -197,3 +197,21 @@ function selectModalidad(btn, valor) {
     document.getElementById('mods').value = valor;
 }
 
+
+
+/*------------------
+        MAPA
+
+    --------------------*/
+
+
+
+
+
+
+
+
+
+
+
+

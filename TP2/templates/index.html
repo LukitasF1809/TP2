@@ -123,24 +123,46 @@
     </section>
     <!-- Classes Section End -->
 
-    <!-- Gallery Section Begin -->
+    <!-- MAPA -->
    <section class="gallery">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title normal-title">
-                    <h2>Mapas del trayecto</h2>
-                    
-                    
-                    <div class="slider">
-                        <div class="slides">
-                            <img src="{{ url_for('static', filename='img/MAPA1.png') }}" alt="Mapa 1">
-                            <img src="{{ url_for('static', filename='img/MAPA2.png') }}" alt="Mapa 2">               
-                        </div>
-                        <button class="b-slide prev">&#10094;</button>
-                        <button class="b-slide next">&#10095;</button>
+                    <title>Mapa con Rutas y Botones</title>
+
+                    <!-- Leaflet -->
+                    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+                    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+                    <!-- Leaflet Routing Machine -->
+                    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+                    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+                     
+
+                    <!-- Tu CSS -->
+                    <link rel="stylesheet" href="css/style.css" />
+                    </head>
+                    <body>
+                    <h2>Ejemplo: Rutas en OpenStreetMap</h2>
+
+                    <!-- Botones -->
+                    <div class="botones">
+                        <button onclick="toggleRuta(1)">Ruta larga</button>
+                        <button onclick="toggleRuta(2)">Ruta corta</button>
                     </div>
+
+                    <!-- Mapa -->
+                    <div id="map"></div>
+
+                    <!-- Librerías -->
                     
+                    
+
+                    <!-- Tu JS -->
+                    <script src="{{ url_for('static', filename='js/map.js') }}"></script>                     
+                   
                 </div>
             </div>
         </div>

@@ -1393,6 +1393,7 @@ background: #dbe0ff;
 	font-size: 18px;
 }
 
+
 /*---------------------
   Classes
 -----------------------*/
@@ -3130,4 +3131,35 @@ background: #dbe0ff;
 
 main {
     flex: 1;
+}
+
+
+
+#map {
+  height: 500px;
+  width: 100%;
+  border: 2px solid #333;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Estilo de los botones */
+.botones {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.botones button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.botones button:hover {
+  background: #2980b9;
 }
