@@ -15,7 +15,7 @@ app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
 app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
-app.config['MAIL_DEFAULT_SENDER'] = ("MTB Bosques", "ciclismouped@gmail.com")
+app.config['MAIL_DEFAULT_SENDER'] = ("MTB Tandil", "ciclismouped@gmail.com")
 mail = Mail(app)
 
 
@@ -26,6 +26,7 @@ diccionario = {
     "fecha": "24-10-2025",
     "descripcion": "Un evento único de ciclismo en la ciudad de Tandil, Buenos Aires. Una jornada para disfrutar del deporte, la naturaleza y los paisajes serranos en un recorrido pensado para todos los amantes de la bicicleta",
     "tipocarr": "Ciclismo urbano y rural",
+    "horario": "9:00 a 18:00",
     "lugar": "Ciudad de Tandil, Buenos Aires",
     "modalidad": {
         1: {"nombre": "carrera corta", "distancia": "30km", "dificultad": "media"},
