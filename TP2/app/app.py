@@ -53,7 +53,7 @@ diccionario = {
     },
 
 "citas": {
-    1: {"archivo":"testimonial-3.png","cita":"Desde que fui en bicicleta en los bosques de palermo, mi vida y mi forma de ver el mundo cambio por completo.","nombre":"Gustavo Cerati"}, 
+    1: {"archivo":"testimonial-3.png","cita":"cuando participe en Tandil en bici 2024, mi vida y mi forma de ver el mundo cambio por completo.","nombre":"Gustavo Cerati"}, 
     2: {"archivo":"testimonial-1.png","cita":"No me pregunten como, pero cuando termine esta carrera, la termine como una persona totalmente diferente","nombre":"Javier Milei"},
     3: {"archivo":"testimonial-2.png","cita":"Al principio dudaba de ir a la carrera, pero una vez fui, ¡Nunca estuve mas feliz de haber participado!","nombre":"niqui nicol(?)"},   
     4: {"archivo":"testimonial-4.png","cita":"Yyy la verdad que mucho no me gusto la carrera","nombre":"Un random que a nadie le importa"},
