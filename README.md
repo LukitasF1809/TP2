@@ -27,9 +27,9 @@ Para poder levantar el proyecto se necesita:
 ## FEATURES
 El proyecto cuenta con cosas tales como: 
 
-   - Mapa interactivo
-   - Animaciones incluidas con js
-   - Pagina de registro donde poder enviar un mensaje a nuestro mail
-   - Un base bien incluido para reciclar correctamente todo el codigo repetido
-   - un diccionario donde poder incluir y editar toda la informacion necesaria con facilidad
+    - Mapa interactivo
+    - Animaciones incluidas con js
+    - Pagina de registro donde poder enviar un mensaje a nuestro mail
+    - Un base bien incluido para reciclar correctamente todo el codigo repetido
+    - un diccionario donde poder incluir y editar toda la informacion necesaria con facilidad
    
