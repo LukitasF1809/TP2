@@ -39,6 +39,7 @@
         $(".offcanvas-menu-overlay").removeClass("active");
         $("body").removeClass("over-hid");
     });
+    
 
     /*------------------
 		Navigation
@@ -56,6 +57,9 @@
         loop: true,
         margin: 0,
         items: 1,
+        mouseDrag: false,
+        touchDrag: false,
+        pullDrag: false,
         dots: false,
         nav: true,
         navText: ["<span class='arrow_left'><span/>", "<span class='arrow_right'><span/>"],
@@ -63,7 +67,7 @@
         animateIn: 'fadeIn',
         smartSpeed: 1200,
         autoHeight: false,
-        autoplay: true
+        autoplay: false
     });
 
     /*--------------------------
@@ -162,5 +166,52 @@
             }
         });
     });
+    /*------------------
+        Inicio Slider
+    --------------------*/
+    const slides = document.querySelector('.slides');
+    const images = document.querySelectorAll('.slides img');
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
 
+    let index = 0;
+
+    function showSlide(i) {
+    index = (i + images.length) % images.length;
+        slides.style.transform = `translateX(${-index * 1200}px)`;
+    }
+
+    prev.addEventListener('click', () => showSlide(index - 1));
+    next.addEventListener('click', () => showSlide(index + 1));
+    /*------------------
+        Fin Slider
+    --------------------*/
 })(jQuery);
+
+function selectModalidad(btn, valor) {
+
+    document.querySelectorAll('.btn-modalidad').forEach(but => but.classList.remove('active'));
+
+    btn.classList.add('active');
+
+    document.getElementById('mods').value = valor;
+}
+
+
+
+/*------------------
+        MAPA
+
+    --------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
