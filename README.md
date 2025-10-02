@@ -33,3 +33,5 @@ El proyecto cuenta con cosas tales como:
     - Un base bien incluido para reciclar correctamente todo el codigo repetido
     - un diccionario donde poder incluir y editar toda la informacion necesaria con facilidad
    
+## LINK A LA PAGINA:
+https://ascitic-overcautious-valorie.ngrok-free.de
