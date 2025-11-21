@@ -92,7 +92,7 @@ def registracion():
                 recipients=["ciclismouped@gmail.com"],  # tu correo donde recibís los formularios
             )
             correo.html = f"""
-                            <h2>Nueva registración recibida</h2>
+                            <h2>Nueva registración recibida</h2>                            
                             <p><strong>Nombre:</strong> {nombre}</p>
                             <p><strong>Email:</strong> {email}</p>
                             <p><strong>Celular:</strong> {num}</p>
@@ -110,4 +110,4 @@ def page_not_found(e):
 
 
 if __name__ == "__main__":
-    app.run("127.0.0.1", port=8081, debug =True)
+    app.run(host="0.0.0.0", port=8080, debug=True)
